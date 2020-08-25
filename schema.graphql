@@ -1,0 +1,79 @@
+type Music {
+  src: String
+  title: String!
+  author: String!
+  thumbnail: String
+}
+
+type Playlist {
+  id: Int!
+  name: String!
+  description: String
+  musics: [Music!]
+}
+
+
+type User {
+  _id: ID!
+  username: String!
+  email: String
+  avatars: String
+  description: String
+  playlists: [Playlist!]
+}
+
+input SignUpInput {
+  username: String!
+  password: String!         
+  email: String!
+  avatars: String
+  description: String
+}
+
+# auth related payload
+type AuthPayload {
+  token: String
+  user: User
+}
+
+type ReCAPTCHAResult {
+  success: Boolean
+  challenge_ts: String
+  hostname: String
+  error_codes: [String]
+}
+
+input musicInput {
+  src: String
+  title: String!
+  author: String!
+  thumbnail: String
+}
+
+input playlistInput {
+  # id: Int!
+  name: String!
+  description: String
+}
+
+##### Top level declarations
+
+type Query {
+  # test there
+  test: String!
+  music(url: String!): Music!
+  searchMusic(keyword: String!): [Music]!
+  user: User
+  playlist: Playlist!
+  rcVerify(token: String!): ReCAPTCHAResult!
+}
+
+type Mutation {
+  signup(input: SignUpInput!): AuthPayload
+  login(email: String!, password: String!): AuthPayload
+  userEdit(description: String, avatars: String): User
+  musicAdd(playlistid: Int!, music: musicInput!): [Playlist!]
+  musicDelete(playlistid: Int!, title: String!): [Playlist!]
+  playlistAdd( playlist: playlistInput!): [Playlist!]
+  playlistDelete(playlistid: Int!): [Playlist!]
+}
