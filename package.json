@@ -1,7 +1,7 @@
 {
-  "name": "groupproject_stayhome_api",
+  "name": "teatime_music_api",
   "version": "1.0.0",
-  "description": "api code for groupProject",
+  "description": "api code for project teatime",
   "main": "index.js",
   "engines": {
     "node": "12.18.3",
