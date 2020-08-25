@@ -16,7 +16,7 @@ To search a song, you can input keyword on the search bar, or input **valid yout
 * If you choose search with keyword, you will get the video search result from youtube, you can click each result to see detail, and choose to save to your playlist (**login required**) or play now(add to current **temporary list**)
 ![image](readme_images/iter3/searchKeywords.gif)
 
-* If you put a valid youtube link (live/movie format is not support currently), you will get the detail page for this video. You can play it or save it as described above.
+* If you put a valid youtube link (live/movie format is not support currently), you will get the detail page for this video. You can play it or save it as described above.<br>
 ![image](readme_images/iter3/searchMusicLink.gif)
 
 ## MyHome
