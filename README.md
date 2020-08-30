@@ -11,6 +11,9 @@ https://stayhome-ui.herokuapp.com/music
 For Front-end code, visit:<br>
 https://github.com/Dalanke/youtube_audio_UI
 
+Want to build your own React music player? Check the player component I used in this project:<br>
+https://github.com/Dalanke/react_audio_player
+
 ## Contribution
 
 [Dalanke](https://github.com/Dalanke)<br>
@@ -49,3 +52,6 @@ PORT=<assigned api server port>
   npm start
   ```
 The streaming service might not be reliable due to the restriction of heroku, we recommend test on localhost to get better experience.
+
+## GraphQL API
+Check [GraphQL.md](./GraphQL.md) for API example and details
